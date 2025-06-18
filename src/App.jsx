@@ -38,13 +38,28 @@ function App() {
   }, []);
 
   const produkter = [
-    { name: "Sticky Rice med Mango", img: "/mango-sticky.jpg" },
-    { name: "Färsk Papaya", img: "/papaya.jpg" },
-    { name: "Gröna Plommon", img: "/plommon.jpg" },
-    { name: "Fruktfat i förberedelse", img: "/fruktfat-prep.jpg" },
-    { name: "Chokladdränkt frukt", img: "/chokladfrukt.jpg" },
-    { name: "Choklad + pistage", img: "/chokladfrukt-top.jpg" },
-    { name: "Jordgubbar med mango & choklad", img: "/jordgubb-mango.jpg" },
+    {
+      name: "Sticky Rice med Mango",
+      img: `${import.meta.env.BASE_URL}mango-sticky.jpg`,
+    },
+    { name: "Färsk Papaya", img: `${import.meta.env.BASE_URL}papaya.jpg` },
+    { name: "Gröna Plommon", img: `${import.meta.env.BASE_URL}plommon.jpg` },
+    {
+      name: "Fruktfat i förberedelse",
+      img: `${import.meta.env.BASE_URL}fruktfat-prep.jpg`,
+    },
+    {
+      name: "Chokladdränkt frukt",
+      img: `${import.meta.env.BASE_URL}chokladfrukt.jpg`,
+    },
+    {
+      name: "Choklad + pistage",
+      img: `${import.meta.env.BASE_URL}chokladfrukt-top.jpg`,
+    },
+    {
+      name: "Jordgubbar med mango & choklad",
+      img: `${import.meta.env.BASE_URL}jordgubb-mango.jpg`,
+    },
   ];
 
   return (
@@ -59,7 +74,11 @@ function App() {
       {/* Header */}
       <header className="bg-[#002B23] text-white px-6 py-4 flex justify-between items-center shadow-md relative">
         <div className="flex items-center gap-4">
-          <img src="/logo.jpg" alt="Gabbe's Frukthörna" className="w-10 h-10" />
+          <img
+            src={`${import.meta.env.BASE_URL}logo.jpg`}
+            alt="Gabbe's Frukthörna"
+            className="w-10 h-10"
+          />
           <div>
             <h1 className="text-lg font-bold text-yellow-400">
               GABBES FRUKTHÖRNA
@@ -124,7 +143,7 @@ function App() {
       {/* Hero */}
       <section className="relative text-center py-16 px-6 text-white">
         <img
-          src="/hero-frukt.jpg"
+          src={`${import.meta.env.BASE_URL}hero-frukt.jpg`}
           alt="Bakgrund av färska frukter"
           className="absolute inset-0 w-full h-full object-cover opacity-30 z-0"
         />
